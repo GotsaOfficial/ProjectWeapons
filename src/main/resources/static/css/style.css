@@ -1,0 +1,34 @@
+* {
+	padding: 0px;
+	margin: 0px;
+}
+
+body, html {
+    height: 100%;
+    background-color: black;
+}
+
+.cover-container {
+    max-width: 42em;
+    position: relative;
+    z-index: 2;
+}
+
+.bg {
+    background-image: url("../media/mainBg.jpg");
+    height: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow: inset 0 0 8rem rgb(0 0 0 / 50%);
+}
+
+.blur {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    left: 0%;
+    top: 0%;
+}
