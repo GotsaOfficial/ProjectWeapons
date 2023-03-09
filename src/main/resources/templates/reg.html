@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title th:text="${title1}"/>
+        <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/bootstrap.css">
+    </head>
+    <body>
+        <div class="bg">
+            <div class="blur"></div>
+            <div class="d-flex h-100 text-white cover-container w-100 p-3 mx-auto flex-column align-items-center justify-content-center">
+                <h1 th:text="${title2}" class="mb-4"/>
+                <form action="">
+                    <div class="mb-2">
+                        <label for="" class="form-label">Ник</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-2">
+                        <label for="" class="form-label">Почта</label>
+                        <input type="email" class="form-control">
+                    </div>
+                    <div>
+                        <label for="" class="form-label">Пароль</label>
+                        <input type="password" class="form-control">
+                    </div>
+                    <hr>
+                    <div class="mb-2">
+                        <label for="" class="form-label">Имя</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-2">
+                        <label for="" class="form-label">Номер</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <div class="mb-2">
+                        <label for="" class="form-label">Страна</label>
+                        <input type="text" class="form-control">
+                    </div>
+                    <button type="submit" class="btn btn-primary">Зарегистрироваться</button>
+                </form>
+            </div>
+    </body>
+</html>

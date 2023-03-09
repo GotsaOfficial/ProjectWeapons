@@ -1,6 +1,7 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
     <head>
+        <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
         <title th:text="${title}"/>
@@ -11,7 +12,7 @@
         <!-- <p th:text="'Hello, ' + ${title} + '!'" /> -->
         <div class="bg">
             <div class="blur"></div>
-            <div class="d-flex h-100 text-center text-white cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
+            <div class="d-flex h-100 text-center text-white cover-container w-100 p-3 mx-auto flex-column">
                 <header class="mb-auto">
                     <div>
                         <h3 class="float-md-start mb-0" th:text="${title}"/>
@@ -28,7 +29,7 @@
                     <h1>Ждем вас в нашем сообществе.</h1>
                     <p class="lead">Тир, Оружия, Форум. Это те вещи которые нас объединяют. Присоединяйся в наш клуб, участвуй в разных фановых мероприятиях, общайся, но всегда помни самые важные правила техники безопастности :)</p>
                     <p class="lead">
-                        <a href="#" class="btn btn-lg btn-light fw-bold border-white bg-white">Зарегистрироваться</a>
+                        <a href="/registration" class="btn btn-lg btn-light fw-bold border-white bg-white">Зарегистрироваться</a>
                     </p>
                 </main>
 
