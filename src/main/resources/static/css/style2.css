@@ -3,6 +3,28 @@
     margin: 0%;
 }
 
+.img-adapt75 {
+    max-width: 75%;
+    height: auto;
+}
+
+@media (min-width: 576px) {
+    /* CUSTOM WIDTHS */
+    .w-sm-100 { width: 100%!important; }
+}
+
+/* MD breakpoint*/
+@media (min-width: 768px) {
+    /* CUSTOM WIDTHS */
+    .w-md-75 { width: 75%!important; }
+}
+
+/* LG breakpoint */
+@media (min-width: 992px) {
+    /* CUSTOM WIDTHS */
+    .w-lg-50 { width: 50%!important; }
+}
+
 footer p {
     margin-top: 1rem;
 }
