@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+        <title th:text="${title1}"/>
+        <link rel="stylesheet" href="../../css/bootstrap.css">
+        <link rel="stylesheet" href="../../css/style2.css">
+    </head>
+    <body data-bs-theme="dark">
+        <div th:insert="blocks/header.html :: header"></div>
+
+        <div class="w-sm-100 w-md-75 w-lg-50 p-3 mx-auto">
+            <div class="border border-white rounded-4 mb-5 bg-dark-subtle">
+                <div th:each="el : ${post}">
+                    <h3 class="p-2 border-bottom ms-1">Редактировать Публикацию</h3>
+                    <form method="post" class="row g-3 p-3">
+                        <div class="mb-2 col-md-12">
+                            <label class="form-label">Название статьи</label>
+                            <input name="title" type="text" th:value="${el.title}" class="form-control bg-dark-subtle" placeholder="Введите название статьи">
+                        </div>
+                        <div class="mb-2 col-md-12">
+                            <label class="form-label">Мини текст</label>
+                            <input name="minitext" type="text" th:value="${el.minitext}" class="form-control bg-dark-subtle" placeholder="Введите мини текст">
+                        </div>
+                        <div class="mb-2 col-md-12">
+                            <label class="form-label">Полный текст</label>
+                            <textarea name="text" type="text" th:text="${el.text}" class="form-control bg-dark-subtle" placeholder="Введите полный текст"/>
+                        </div>
+                        <hr>
+                        <button type="submit" class="btn btn-outline-light">Изменить статью</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+
+        <div th:insert="blocks/footer.html :: footer"></div>
+        <script src="../../js/bootstrap.bundle.js"></script>
+    </body>
+</html>

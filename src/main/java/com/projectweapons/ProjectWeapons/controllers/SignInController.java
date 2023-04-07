@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.GetMapping;
 public class SignInController {
 
     @GetMapping("/login")
-    public String greeting(Model model) {
+    public String signIn(Model model) {
         model.addAttribute("title1", "PW | Войти");
         model.addAttribute("title2", "Project Weapons");
         return "signin";

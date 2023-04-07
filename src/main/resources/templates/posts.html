@@ -12,8 +12,17 @@
         <div th:insert="blocks/header.html :: header"></div>
 
         <div class="w-sm-100 w-md-75 w-lg-50 p-3 mx-auto">
+            <div th:each="el : ${posts}" class="border border-white rounded-4 mb-5 bg-dark-subtle">
+                <h3 th:text="${el.title}" class="p-2 border-bottom ms-1"/>
+                <img src="media/mainBg.jpg" class="img-adapt75 rounded mx-auto d-block" alt="img">
+                <p th:text="${el.minitext}" class="p-3 mb-2 border-top mt-2 border-bottom"/>
+                <div class="d-flex justify-content-between align-items-center ms-3 me-3">
+                    <a th:href="'/posts/' + ${el.id}" class="btn btn-light ms-3 mb-3">Смотреть</a>
+                    <p th:text="${el.likes}" class="me-3"/>
+                </div>
+            </div>
             <div class="border border-white rounded-4 mb-5 bg-dark-subtle">
-                <h3 class="p-2 border-bottom ms-1">Test1</h3>
+                <h3 class="p-2 border-bottom ms-1">Test1 Вставка HTML</h3>
                 <img src="media/mainBg.jpg" class="img-adapt75 rounded mx-auto d-block" alt="img">
                 <p class="p-3 mb-2 border-top mt-2 border-bottom">Test test test test test test test test test test test test test test test test test test test test test test test test test test </p>
                 <div class="d-flex justify-content-between align-items-center ms-3 me-3">
@@ -22,7 +31,7 @@
                 </div>
             </div>
             <div class="border border-white rounded-4 mb-5 bg-dark-subtle">
-                <h3 class="p-2 border-bottom ms-1">Test1</h3>
+                <h3 class="p-2 border-bottom ms-1">Test2 Вставка HTML</h3>
                 <img src="media/mainBg.jpg" class="img-adapt75 rounded mx-auto d-block" alt="img">
                 <p class="p-3 mb-2 border-top mt-2 border-bottom">Test test test test test test test test test test test test test test test test test test test test test test test test test test </p>
                 <div class="d-flex justify-content-between align-items-center ms-3 me-3">
