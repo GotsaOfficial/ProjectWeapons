@@ -3,6 +3,7 @@ package com.projectweapons.ProjectWeapons.controllers;
 import com.projectweapons.ProjectWeapons.models.PostsModel;
 import com.projectweapons.ProjectWeapons.repo.PostsRepository;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -23,7 +24,7 @@ public class PostsController {
     public String posts(Model model) {
         model.addAttribute("title1", "PW | Публикации");
         model.addAttribute("title2", "Project Weapons");
-        Iterable<PostsModel> posts = postsRepository.findAll();
+        Iterable<PostsModel> posts = postsRepository.findAll(Sort.by(Sort.Direction.DESC, "id"));
         model.addAttribute("posts", posts);
         return "posts";
     }
@@ -49,6 +50,10 @@ public class PostsController {
         if(!postsRepository.existsById(id)) {
             return "redirect:/posts";
         }
+
+        PostsModel postV = postsRepository.findById(id).orElseThrow();
+        postV.setViews(postV.getViews() + 1);
+        postsRepository.save(postV);
 
         Optional<PostsModel> post = postsRepository.findById(id);
         ArrayList<PostsModel> res = new ArrayList<>();
